@@ -1,0 +1,59 @@
+html,body{
+    width: 100%;
+    align-content: center;
+    margin: 0 auto;
+    text-align: center;
+}
+.header{
+    margin: 30px auto;
+}
+.container{
+    vertical-align: middle;
+    width: 500px;
+    height: auto;
+    margin: 0 auto;
+}
+
+#inputField{
+    height: 20px;
+    vertical-align: center;
+    border-radius: 10px;
+    width: 300px;
+    border-style: groove;
+    /* margin: 0em; */
+}
+.listLabel,
+.listTodos {
+    width: auto;
+    align-items: center;
+    margin: 2em 0 1em 0;
+    height: 1em;
+}
+
+.listLabel,
+.count{
+    font-size: 1.2em;
+    font-weight: bolder;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.listTodos{
+    height: auto;
+    width: 30%;
+    margin: 30px auto;
+    text-align: left;
+    font-size: 0.85em;
+    font-weight: 530;
+    cursor: pointer;
+}
+.taskLabel{
+    cursor: pointer;
+}
+.container .btn{
+    height: 30px;
+    min-width: 30px;
+    /* margin: 0 0 0 0.9em; */
+    border-style: groove;
+    font-size: 0.85em;
+    font-weight: bolder;
+    cursor: pointer;
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="index.js"></script>
+    <title>To Do List</title>
+</head>
+<body>
+    <h1 class="header">Cadamban Kannan</h1>
+    <div class="container" id = "form-action">
+        <input id = "inputField" type="text">
+        <button id = "addTodoBtn" class="btn">+</button>
+        <button id = "clearTodoBtn" class="btn">Clear Completed</button>
+        
+    </div>
+    <div class = "listLabel" >
+        <label for="">ToDo List</label>
+    </div>
+    <div class="listTodos" id = "listTodo">
+        <!-- <div class="task">
+            <input type="checkbox" id="1" name="a"/>
+            <label for="1">a</label>
+        </div>
+        <div class="task">
+            <input type="checkbox" id="2" name="b"/>
+            <label for="2">b</label>
+        </div>
+        <div class="task">
+            <input type="checkbox" id="3" name="c"/>
+            <label for="3">c</label>
+        </div> -->
+    </div>
+    <div class = "count" id = "countTodo">
+        0 Left Todo
+    </div>
+    <template id="task-Template">
+        <div class="task">
+            <input type="checkbox"/>
+            <label for=""></label>
+        </div>
+    </template>
+    
+</body>
+</html>

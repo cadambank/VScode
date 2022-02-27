@@ -1,0 +1,23 @@
+{
+  "name": "node-experiments",
+  "version": "1.0.0",
+  "description": "Learning Node and Express js",
+  "main": "1helloWorld.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "keywords": [
+    "Learning",
+    "Node",
+    "Express"
+  ],
+  "author": "Cadamban Kannan",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}

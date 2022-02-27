@@ -1,9 +1,11 @@
 const http = require('http');
+// const {readFileSync} = require('fs')
 
 const server = http.createServer((req,res)=>{
     console.log(req.url);
     if(req.url === '/'){
-        res.end('<h1>Welcome to our homepage</h1>');
+        // const todoList = readFileSync('./todoList','utf8')
+        res.end(todoList);
         return;
     }
     if(req.url === '/about'){

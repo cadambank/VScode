@@ -13,12 +13,32 @@
     transition: 0.5s ease-in-out;
     padding-top: 10px;
 }
+.checkbox {
+    display: none;
+}
+.taskTitle {
+    margin: 0 1rem;
+    position: absolute;
+}
+.taskTitle::after {
+    content: "";
+    margin: -0.9rem -0.5rem;
+    width: 0; 
+    height: 0; 
+    border-top: 4px solid transparent;
+    border-left: 5px solid black;  
+    border-bottom: 4px solid transparent;
+    display: block;
+    position: relative;
+    transition: 0.5s ease-in-out;
+}
+
 
 .detail {
     /* display: none; */
     /* position: relative; */
     padding: 1em;
-    margin: 1em 0 0 0;
+    margin: 2em 0 0 0;
     /* height: 0; */
     border-top: 1px solid gray;
     /* overflow: hidden; */
@@ -37,4 +57,7 @@
     padding-top: 20px;
     display: block;
     height: 200px;
+}
+.task:hover .taskTitle::after {
+    transform: rotate(90deg);
 }

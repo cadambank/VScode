@@ -1,3 +1,5 @@
+// const { filter } = require("minimatch");
+
 let addTodoBtn = document.getElementById("addTodoBtn");
 let todoContainer = document.getElementById("listTodo");
 let inputField = document.getElementById("inputField");
@@ -27,16 +29,25 @@ clearCompletedBtn.addEventListener("click",function(){
     saveTasks(checkboxArr);
     renderTask(checkboxArr);
 });
-function addTask(checkboxArr,id='',name){
+function addTask(checkboxArr,id='',name,checked = false){
     let date = new Date();
     if(id == '') id = date.toString();
     checkboxArr.push({
         id : id,
         name : name,
-        checked : false
+        checked : checked
     });
     
 };
+
+todoContainer.addEventListener("click",function(){
+    checkboxArr = []
+    document.querySelectorAll('input[type="checkbox"]').forEach((e)=>{
+        addTask(checkboxArr,e.id,e.name,e.checked)
+    })
+    
+    updateCount(checkboxArr,document.getElementById('countTodo'));
+})
 
 function renderTask(checkboxArr){
     todoContainer.innerHTML = "";
@@ -56,6 +67,7 @@ function renderTask(checkboxArr){
         taskDiv.appendChild(labelTask);
         todoContainer.appendChild(taskDiv);
     };
+    updateCount(checkboxArr,document.getElementById('countTodo'))
 };
 
 function saveTasks(checkboxArr){
@@ -68,7 +80,15 @@ function deleteTask(checkboxArr){
     pendingTasks.forEach(e=>{
         addTask(checkboxArr,e.id,e.name)
     });
+    updateCount(checkboxArr,document.getElementById('countTodo'))
     return checkboxArr;
+};
+
+
+const updateCount = (checkboxArr, countContainer) =>{
+    const count = checkboxArr.filter((e) => e.checked == false).length
+    // console.log(count);
+    countContainer.innerText = `${count} ToDos Pending`
 };
 
 renderTask(checkboxArr);

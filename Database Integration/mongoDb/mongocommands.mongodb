@@ -1,0 +1,51 @@
+// MongoDB Playground
+// To disable this template go to Settings | MongoDB | Use Default Template For Playground.
+// Make sure you are connected to enable completions and to be able to run a playground.
+// Use Ctrl+Space inside a snippet or a string literal to trigger completions.
+
+// Select the database to use.
+use('todoTask')
+
+
+// The drop() command destroys all data from a collection.
+// Make sure you run it against the correct database and collection
+
+
+
+
+use('todoApp');
+db.createCollection("todoTasks", {
+   validator: {
+      $jsonSchema: {
+         bsonType: "object",
+         required: [ "taskTitle", "taskTimestamp" ],
+         properties: {
+            taskTitle: {
+               bsonType: "string",
+               description: "must be a string and is required"
+            }
+         }
+      }
+   }
+});
+
+use('todoApp');
+
+db.todoTasks.insertMany([
+  { '_id': 1, 'taskTitle': 'Create User', 'taskTimestamp': '2022-02-01T08:00:00Z' },
+  { '_id': 2, 'taskTitle': 'Create Collection', 'taskTimestamp': '2022-02-01T09:00:00Z' },
+  ]);
+
+
+use('todoApp');
+
+db.todoTasks.insertMany([
+  { '_id': 3, 'taskTitle': 'Test Collection', 'taskTimestamp': '2022-02-01T09:00:00Z', 'Details' : 'Testing current Collection' },
+  ]);
+
+
+use('todoApp');
+
+db.todoTasks.insertMany([
+  { '_id': 3, 'taskTitle': 'Test Collection', 'taskTimestamp': '2022-02-01T09:00:00Z', 'Details' : 'Testing current Collection' },
+  ]);

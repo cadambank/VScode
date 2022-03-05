@@ -1,0 +1,15 @@
+use('todoApp')
+
+db.getCollection('todoTasks');
+
+use('todoApp')
+db.todoTasks.countDocuments();
+
+use('todoApp')
+db.todoTasks.insertMany([
+  { '_id': 4, 'taskTitle': 'Test Admin', 'taskTimestamp': '2022-02-01T10:00:00Z', 'Details' : 'Testing current Collection' },
+  ]);
+
+
+use('todoApp')
+db.todoTasks.find();

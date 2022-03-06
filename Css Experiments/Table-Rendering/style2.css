@@ -1,0 +1,42 @@
+body {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    background-color: aliceblue;
+    width: 90vw;
+    height: 95vh;
+    border:1px solid black;
+    margin: 2.5vh 4vw;
+    overflow: hidden;
+}
+
+.block1 {
+    display: block;
+    background-color: aquamarine;
+    width: 100%;
+    height: 10%;
+    
+}
+.mainblock {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: green;
+    display: flex;
+}
+.mainblock .block2 {
+    background-color:blue;
+    width: 20%;
+    height: 100%;
+    
+}
+
+.mainblock .block3 {
+    display: block;
+    position: relative;
+    background-color: red;
+    width: 80%;
+    height: 100%;
+    border-bottom: 1px solid black;
+
+}

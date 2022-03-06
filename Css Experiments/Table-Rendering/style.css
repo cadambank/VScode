@@ -1,0 +1,128 @@
+body {
+    background-color: aliceblue;
+    width: 95vw;
+    height: 95vh;
+    margin: 2.5vh 2.5vw;
+    border: 1px solid black;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: calibri;
+}
+
+#screenheader{
+    background-color: green;
+    width: 100%;
+    height: 10%;
+    text-align: center;
+    color: aliceblue;
+    margin: 0;
+}
+
+#filter-box{
+    width: 100%;
+    height: 8%;
+    display: flex;
+    flex-direction: row;
+    border-top: 1px solid black;
+}
+
+.filter {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: green;
+    color: aliceblue;
+    border-right: 1px solid black;
+}
+
+.label-filter{
+    width: 100%;
+    height: 100%;
+    font-weight: 600;
+}
+
+.filter-dropdown{
+    width: 100%;
+    height: 100%;
+}
+
+#metrics-charts{
+    width: 100%;
+    height: 82%;
+    display: flex;
+    flex-direction: row;
+}
+
+#keymetrics-sidebar{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid black;
+}
+
+#keymetrics-sidebar #Keymetrics {
+    width: 100%;
+    height: 4vh;
+    background-color: green;
+    color: aliceblue;
+    font-weight: 600;
+    text-align: center;
+    padding: 5px 0;
+    border-bottom: 1px solid black;
+}
+
+#keymetrics-sidebar .key {
+    width: 100%;
+    height: min(10vh,100%);
+    border-bottom: 1px solid black;
+    display: flex;
+    flex-direction: column;
+}
+
+.key .label-keyMetric {
+    width: 100%;
+    height: 100%;
+    border-bottom: 1px solid black;
+    background-color: green;
+    color: aliceblue;
+    text-align: center;
+    font-weight: 500;
+    padding: 5px 0;
+}
+.key .indKey {
+    width: 100%;
+    height: 100%;  
+    display: grid;  
+    grid-template-columns: auto auto auto;
+    grid-gap: 1px;
+    background-color: black;
+    /* border: 1px solid black; */
+}
+
+.indKey .metric {
+    width: 100%;
+    height: 100%;
+    display: flex;  
+    flex-direction: column;
+    /* border: 1px solid black; */
+}
+
+.indKey .ind-header {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background-color: green;
+    color: aliceblue;
+}
+
+.indKey .ind {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background-color: aliceblue;
+    border-bottom: 1px solid black;
+}

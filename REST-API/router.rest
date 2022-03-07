@@ -1,0 +1,25 @@
+GET http://localhost:3000/subscribers
+
+###
+GET http://localhost:3000/subscribers/622511d3753af0183728d2c6
+
+
+###
+POST http://localhost:3000/subscribers
+Content-Type: application/json
+
+{
+    "name":"Girl Random",
+    "subscriberToChannel":"Learning First Code"
+}
+
+###
+DELETE http://localhost:3000/subscribers/62251b27e9e6909a4f8bc532
+
+###
+PATCH http://localhost:3000/subscribers/62251b89bfacee8fb649d771
+Content-Type: application/json
+
+{
+   "name":"New Name"
+}

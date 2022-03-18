@@ -1,0 +1,9 @@
+
+use('myapp');
+
+// db.createCollection("user");
+// db.dropUser("myappadmin");
+db.createUser(
+{	user: "myappadmin",
+	pwd: "myappadmin@123",
+	roles:[{role: "readWrite", db:"myapp"}]});

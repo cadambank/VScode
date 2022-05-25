@@ -1,0 +1,45 @@
+GET http://localhost:3000/subscribers
+
+###
+GET http://localhost:3000/subscribers/622511d3753af0183728d2c6
+
+
+###
+POST http://localhost:3000/bajaj/primary
+Content-Type: application/json
+
+{
+    "Kunnr": "10924",
+    "CustomerName": "SURESH AUTO DEAL",
+    "DocumentType": "ZVOR",
+    "DocumentDate": "2021-03-06T00:00:00Z",
+    "DocumentNumber": "338269987",
+    "ItemNumber": "000001",
+    "Material": "52240645",
+    "MaterialDescriptio": "WIND SHIELD REFL ED COATED",
+    "Quantity": "    2.000",
+    "Uom": "EA",
+    "Slocation": "SPR2",
+    "NetValue": "4395.92",
+    "Currency": "INR",
+    "Division": "B1",
+    "Plant": "WA02",
+    "Katr6": "CV",
+    "City": "DOMBIVLI - EAST,THANE",
+    "Region": "MAH",
+    "Total": "5626.78",
+    "TotalCurrency": "INR",
+    "Tax": "1230.86",
+    "TaxCurrency": "INR"
+}
+
+###
+DELETE http://localhost:3000/subscribers/62251b27e9e6909a4f8bc532
+
+###
+PATCH http://localhost:3000/subscribers/62251b89bfacee8fb649d771
+Content-Type: application/json
+
+{
+   "name":"New Name"
+}
